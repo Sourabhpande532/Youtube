@@ -10,6 +10,8 @@ Need to colaps of My sidebar with clicking on hamburger Menu So How Will do That
 -then create slice 
 -attach store to Provider at parent folder which is App.js 
 -
-
-
+Search: -youtube api key auth
+        -Youtube video api
+Ref: 🔗✈️https://console.cloud.google.com/apis/credentials?project=infra-rhino-396209
+Ref: 🔗✈️https://developers.google.com/youtube/v3/docs/videos/list
 */

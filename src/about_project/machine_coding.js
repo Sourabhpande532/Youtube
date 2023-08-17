@@ -30,4 +30,7 @@
  -Let's say as far I know there is UI & Data Layer for UI I preffer to choose "Tailwaind" & for Data Mangaging My personal Choice moves towards "Redux"
  -Tell about tech stack info Why Tailwaind it's modern technology which makes app faster!
  -it is easy to write & customizable save us reusability & it is extensible.
+
+
+ @NOTE: While Building functionality of video Container Need to ask Question How will i get data is it hardCoded or From API! which one do you have ??
 */

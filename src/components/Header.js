@@ -7,6 +7,7 @@ const Header = () => {
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
+  
   return (
     <div className='grid grid-flow-col p-4 m-2 shadow-lg'>
       <div className='flex col-span-1'>
