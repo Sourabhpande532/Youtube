@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
 
-const VideoCart = () => {
+const VideoCart = ({ info }) => {
+  console.log(info);
+  const { snippet, statistics } = info;
+  // const { channelTitle, title, thumbnails } = snippet;
+
   return (
-    <div>VideoCart</div>
-  )
-}
+    <div>
+      <img alt='video' src={snippet.thumbnails.medium.url} />
+      <ul>
+        <li>{snippet.title}</li>
+        <li>{snippet.channelTitle}</li>
+        <li>{statistics.viewCount}</li>
+      </ul>
+    </div>
+  );
+};
 
-export default VideoCart
+export default VideoCart;

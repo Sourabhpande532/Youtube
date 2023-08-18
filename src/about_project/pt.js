@@ -14,4 +14,9 @@ Search: -youtube api key auth
         -Youtube video api
 Ref: 🔗✈️https://console.cloud.google.com/apis/credentials?project=infra-rhino-396209
 Ref: 🔗✈️https://developers.google.com/youtube/v3/docs/videos/list
+
+Where should i make API Call in 🗃️videoCantainer.js file 
+
+@NOTE: Ensure Don't start directly with map Alway start with 0 e.g videos[0] like that 
+
 */
