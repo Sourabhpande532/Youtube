@@ -4,6 +4,7 @@ import { YOUTUBE_VIDEO_API } from "../utils/constant";
 
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
+
   useEffect(() => {
     getVideos();
   }, []);
@@ -11,23 +12,25 @@ const VideoContainer = () => {
   const getVideos = async () => {
     try {
       const data = await fetch(YOUTUBE_VIDEO_API);
-      if (!data.ok) {
-        throw new Error(`API request failed with status: ${data.status}`);
-      }
       const json = await data.json();
-      console.log(json.items);
       setVideos(json.items);
     } catch (error) {
       console.error("Error fetching videos:", error);
     }
   };
+
+  if (videos.length === 0) {
+    return null;
+  }
+
   return (
     <div>
-      <h1>
-      <VideoCart info={videos[0]}/>
-      </h1>
+      <VideoCart video={videos[0]} />
     </div>
   );
 };
 
 export default VideoContainer;
+
+
+
