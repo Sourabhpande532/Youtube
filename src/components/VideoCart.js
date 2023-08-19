@@ -1,7 +1,7 @@
 import React from 'react';
 
-const VideoCart = ({ video }) => {
-  const { snippet, statistics } = video;
+const VideoCart = ({ info }) => {
+  const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
 
   return (
@@ -10,7 +10,7 @@ const VideoCart = ({ video }) => {
       <ul>
         <li className='font-bold py-2'>{title}</li>
         <li>{channelTitle}</li>
-        <li>{statistics.viewCount}</li>
+        <li>{statistics.viewCount} Views</li>
       </ul>
     </div>
   );

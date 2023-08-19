@@ -14,6 +14,7 @@ const VideoContainer = () => {
       const data = await fetch(YOUTUBE_VIDEO_API);
       const json = await data.json();
       setVideos(json.items);
+      console.log(json.items);
     } catch (error) {
       console.error("Error fetching videos:", error);
     }
@@ -24,8 +25,10 @@ const VideoContainer = () => {
   }
 
   return (
-    <div>
-      <VideoCart video={videos[0]} />
+
+    <div className="flex flex-wrap">
+      {videos.map(video => <VideoCart key={video.id} info={video} />)}
+      {/*<VideoCart info={videos[0]} /> */}
     </div>
   );
 };
