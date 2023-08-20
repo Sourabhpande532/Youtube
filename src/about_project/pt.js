@@ -24,7 +24,7 @@ Where should i make API Call in 🗃️videoCantainer.js file
 
 
 
--------------------------------SECTION-------------------------------
+-------------------------------SECTION---------------------------
 @TITLE_OF-DYANAMIC_ROUTING
 @LOCATION: 🗃️WATCHPAGE.JS && 🗃️APP.JS 
 @HINT: BELOW appRouter Notes How It's Work  
@@ -54,4 +54,41 @@ Where should i make API Call in 🗃️videoCantainer.js file
   -🎯GIVEN Fact of Childern is wherever you mention Outlet it shoot or change
 
   Q)How will I configured what'll be the render inside my Outlet!
+
+-------------------------------SECTION---------------------------
+@TITLE: HIGHER-ORDER COMPONENT
+@LOCATION:
+@HINT: 
+
+Higher Order Components 
+Ref:✈️🔗https://legacy.reactjs.org/docs/higher-order-components.html
+
+-🎯It is basically taking a Components & return Components but this time it comes with Modification Upadated one 
+-🎯Concretely, a higher-order component is a function that takes a component and returns a new component.
+-🎯WHY would I need it Higher Order function Let suppose you want do small Modification on top of you'r video Card by mean Uniqu stuff while click on Youtube Videos you'll notice at any one video which is uniqe one where they mention ad,view all or something Unique which makes different from other!
+-🎯for More Clarification go 🗃️component/VideoCard.js see we apply border at one video  
+
+
+-----------------------))-------------------------
+@DEBOUNCING  
+-It is Not making an API Call on every Key press talk about flipcart website just like Youtube(it makes Api call on every key press)
+-So this concept know as ""Debouncing"" DEBOUNICING 
+-IF I'M WRITTING FAST IT JUST SKIP SOME EVENT WHICH
+
+WHAT IS DEBOUNCING??
+-🎯It says if you'r typing very fast then Difference Between Two key Stroke is very less
+-🎯Let suppose I'm typing slow Then Difference Between Two key Storke is very High 
+-Ensure That Talk about while searching on searchbar 
+
+E.g 
+Typing slow = 200ms 
+Typing fast = 20ms 
+Q) If user is very fast typing Does that mean I need to show suggestions?
+-> Obivious No if it typing slow then Need it must show while searching
+
+
+
+
+
+
 */

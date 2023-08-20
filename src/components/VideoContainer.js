@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import VideoCart from "./VideoCart";
+import VideoCart, { AdVideoCard } from "./VideoCart";
 import { YOUTUBE_VIDEO_API } from "../utils/constant";
 import { Link } from "react-router-dom";
 
@@ -21,12 +21,14 @@ const VideoContainer = () => {
     }
   };
 
+  // Early Return 
   if (videos.length === 0) {
     return null;
   }
 
   return (
     <div className='flex flex-wrap'>
+     {videos[0] && <AdVideoCard info={videos[0]}/>}
       {videos.map((video) => (
         <Link to={"/watch?v=" + video.id}>
           <VideoCart key={video.id} info={video} />
