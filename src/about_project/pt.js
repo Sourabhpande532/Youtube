@@ -71,9 +71,9 @@ Ref:✈️🔗https://legacy.reactjs.org/docs/higher-order-components.html
 
 -----------------------))-------------------------
 @DEBOUNCING  
--It is Not making an API Call on every Key press talk about flipcart website just like Youtube(it makes Api call on every key press)
--So this concept know as ""Debouncing"" DEBOUNICING 
--IF I'M WRITTING FAST IT JUST SKIP SOME EVENT WHICH
+-🎯It is Not making an API Call on every Key press talk about flipcart website just like Youtube(it makes Api call on every key press)
+-🎯So this concept know as ""Debouncing"" DEBOUNICING 
+-🎯IF I'M WRITTING FAST IT JUST SKIP SOME EVENT WHICH
 
 WHAT IS DEBOUNCING??
 -🎯It says if you'r typing very fast then Difference Between Two key Stroke is very less
@@ -81,10 +81,42 @@ WHAT IS DEBOUNCING??
 -Ensure That Talk about while searching on searchbar 
 
 E.g 
-Typing slow = 200ms 
-Typing fast = 20ms 
+🔻Typing slow = 200ms 
+🔻Typing fast = 20ms 
+
 Q) If user is very fast typing Does that mean I need to show suggestions?
--> Obivious No if it typing slow then Need it must show while searching
+
+-🎯Obivious No it does'nt need for intermediate result if it typing slow then Need it must show while searching
+-🎯it is like useLess to call API every Storke key code 
+-🎯OLD Developer Had Convenction It's hardely makes a Difference instead of 7 API call You made 3 API Call but it's not ... But NOT SEANARIO Change 
+-🎯This are the small thing increase your PERFORMANCE 
+
+🤔HOW IT GONNA HELP ??
+
+PERFORMANCE💃: 
+IF I AM WRITTING 14 LETTER(+iphone pro max) & Lets Suppose There is 1000 Student 
+🔻# 14 * 1000 = 140000 
+Here 14 thousand time call API 
+
+But, WITH DEBOUNCING Same 14 Letter 
+🔻# 3 API Calls * 1000 = 3000 
+Here 3 thousand Time call Did you see The Difference take e.g of flipcart website  
+
+@NOTE:For Doing so it gives a good user Experience first wait till you click the button then show result 
+
+💃✈️DEBOUNCING WITH 200ms 
+-🎯If difference Between 2 key Stroke is less than < 200ms(Suppose you fast type No Need to show suggestions) - Decline API Call(NOT CALL API)
+-🎯if Difference is Greter than <200ms(suppose you slow type then Need to show suggestions) Between 2 key Stroke - MAKE API CALL 
+
+@FACT: Then Why Youtube call API on every PRESS KEY Because Debouncing is very less instead of 200ms might be 100ms or 50ms but DEBOUNCING is over there you can't say it's not there
+
+@SEARCH_Word: google search suggestions api 
+Ref: https://stackoverflow.com/questions/5102878/where-is-the-documentation-for-the-google-suggest-api
+Ref: https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=Hello
+42min
+
+
+
 
 
 
