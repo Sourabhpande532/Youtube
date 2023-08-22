@@ -112,15 +112,45 @@ Here 3 thousand Time call Did you see The Difference take e.g of flipcart websit
 
 @SEARCH_Word: google search suggestions api 
 Ref: https://stackoverflow.com/questions/5102878/where-is-the-documentation-for-the-google-suggest-api
-Ref: https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=Hello
-42min
+API:🔗✈️ https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=Hello
+
+@SEARCH_Word: youtube search suggestions API USE THIS FOR PROJECT 
+REF: https://stackoverflow.com/questions/11275365/youtube-api-search-auto-complete
+API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=Query
 
 
+0------------------------NEW------------------------0
+
+@TITLE:BUILDING SEARCH FUNCTIONALITY 
+@LOCATION: 🗃️HEADER.JS 
+@HINT:FROM useEffect TO TILL TOGGLE BETWEEN PORTION 
 
 
+  #TASK: 
+       -Make an API Call after ever key press
+       -But if the Diff Betn 2 API Calls is less than >200ms(Consider 2 sec(2000) for more understanding) Then Decline The API Call
+       -In order to perform this we must aware of compoundWillMount(); that mean return by the term it meand restart app one more time from scratch  
+       -This concept know as DEBOUNCING 
+       LET's Understand 
 
 
+        * if PRESS KEY - i ]
+        *   -Render The component
+        *   -useEffect() Call
+        *   -Then start timer _> Make API Call after 200ms
+        * 
+        * 
+        * key - What if i press one more key 
+        * key - ip ]
+        *   -Destroy the component & call clearTimeout
+        *   -Re-Render The component
+        *   -useEffect() Call
+        *   -Then again start timer _> Make API Call after 200ms But this time it is New Timer totally new 
+        * 
+        * set
+        * 
+        * PROCESS know as Reconcialation 
+        * 
+        * 
 
-
-
-*/
+        *  */
