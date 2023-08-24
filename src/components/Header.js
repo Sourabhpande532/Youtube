@@ -10,9 +10,9 @@ const Header = () => {
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
 
-  // console.log(searchQuery);
+ 
   const searchCache = useSelector((store) => store.search);
-  // store.search gives you empty Object & it's combo of SearchKey+APISuggestion @NOTE:setRedux here with value
+  /*store.search gives you empty Object & it's combo of SearchKey+APISuggestion @NOTE:setRedux here with value*/
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -29,45 +29,6 @@ const Header = () => {
     };
   }, [searchQuery]);
 
-  /*4
-  -As we see above we'r making an API Call via getSearchSuggestion()  
-  -there in API we need pass searchQuery and API suggesation as per stored value inside redux tool kit  
-  -Need to pass logic as a Cache(did redux) itself Let's try 
-  -By the term logic means use if else 
-  -if it is present in my cache/redux store Then directly setSuggestion(json[1]) or else make an API call and setSuggestion
-  -conclude If it is present in my cache(redux store) don't make an Api call(TA:getSearchSuggestion()) just directly set my data from redux/cache store what we build it;
-  -Now it's time to create cache How will get access to this cache(redux store) by subscribing to it!! see code above useEffect by mean we'r reading data 
-  -store.search it will give you empty Object what we mentioned in 🗃️searchSlice.js see initialState:{}
-  -Now we'r gonna'v searchCache(cache:combo of searchkey({empty})+APISuggestion) over ther with empty Object
-  -Let's If searchQuery present in my searchCache(cache) How'll i find that 
-
-  Our cache Look something like this combo of searchkey({empty})+API suggesation
-
-  --------------------👨‍💻
-  #CODE:
-  searchCache = 
-  {
-    "ipho":["iphone11","iphone13","iphone14"]
-  }
-  searchQuery = ipho
-  @NOTE: I'm trying to findOut searchCache Of searchQuery & what will it return i'll setSuggestion(my) & i'll setSuggestion with searchCache of searchQuery by mean "ipho":["iphone11","iphone13","iphone14"]
-  @NOTE:searchQuery:"ipho" setSuggestion:["iphone11","iphone13","iphone14"] that we'r manually set(setSuggestion) it searchCache of searchQuery
-  --------------------👨‍💻
-  
-  So,How'll i search if "ipho" is present in my searchCache/cache/redux stor or not how'll i present
-  -Logic of if and else in useEffect
-  -If my searchCache of[] is searchQuery present in genral searchCache[searchQuery] then just return the searchCache of[searchQuery] "@"[] consider this Of
-  in genral searchCache[searchQuery]; directly set this value 
-
-  What if If not present in my cache/searchCache/redux ?? what should i do i should make an API Call and Upadat it my cache How will Upadat it Go getSearchSuggestion = async() SECTION & Upadat it HoW YOu do that Just dispatch an action It is as simple as that😍 & 
-  -what will i send in my cacheResult inside it  
-  -send an Object of it ensure that not json
-  -Object comes with key & value pair 
-  -Key Always send in [...] inside it
-  -
-  then comes to else part
-
-  */
 
   const getSearchSuggestion = async () => {
     console.log("API CALL - " + searchQuery);
@@ -79,8 +40,8 @@ const Header = () => {
     // update cache
     dispatch(
       cacheResult({
-        iphone:[1,3,4,4],
-        [searchQuery]: json[1],
+      /* iphone:[1,3,4,4], dummy data*/
+      [searchQuery]: json[1],
       })
     );
   };

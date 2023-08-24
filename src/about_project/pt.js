@@ -157,15 +157,87 @@ API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds
         0)
         LET'S WORK ON REDUX TO BUILD SEARCH FUNCTIONALITY WHILE NOT REPEAT SAME API REGAIN 
         
-        E.g IF I Write "iphon max pro" It make API Call According to But IF Want to back from" pro" by using Backslash So it should not Make API call that is task!! LIKE youtube 
+        E.g IF I Write "iphon max pro" It make API Call on each word According to But IF Want to back from" pro" by using Backslash So it should not Make API call that is task!! LIKE youtube 
 
-        -Whenever I'm searching I'll make cache inside my redux like a store 
-        -by mean it'll store search result inside my redux store 
-        -Not search for same work one it make it 
-        -Now it's time to store so first create 🗃️searchSlice.js;
-        -Go on searchSlice;
-        2:05m
-       
-       */
+        -🎯Whenever I'm searching I'll make cache inside my redux like a store 
+        -🎯by mean it'll store search result inside my redux store 
+        -🎯Not search for same work one it make it 
+        -🎯Now it's time to store so first create 🗃️searchSlice.js;
+        -🎯Go on 🗃️searchSlice;
+        
 
+        1)From 🗃️searchSlice.js 
+        @IMP:POINTS & OVERVIEW 
+        /
+/*
+ * Ok What is my initialState Now it's time to create Cache for DSA Plays very vital role TC & SC complexity
+ * Cache
+ * ?Time complexity to search in Array should be  = O(n) it mean you'v to do linear search one by one one to check for all(loop)
+ * Some people might be use direct methode "array.indexOf() Or array.includes()" TC same linear = O(n);
+ * if i'm search on array
+ * E.g [i,ip,iph,iphone] it takes time to count which is Big of O(n) for search iphone but in opposite of that
+ * But if i'm search on object
+ * E>g {i:,ip:,iph:,iphon:} it quicklly happend and TC is more far better than leaner(O(n))
+ * it might be Big O of 1, O(1); know ther term is know as hashmap
+ *
+ * so you can use this way or there is one more way which is far more better than Object which is
+ * new Map(); to search value inside Object
+ * --------------
+ *   
+ * 
+ *  
+2)Existing file 
+ -😵initialState it suppose to empty Object as per querry bcz search should be empty at initial 
+-🎯then pass reducers inside into it pass state & action
+-🎯 if my 'state' is an empty Object then what'll i pass Let me first demo what would i sent into querry first of all 
+-🎯we'll send via Object LIKE {"ip"(key string): ["iphone","iphone11","iphone13"] all are "searchResult"}
+-🎯key string mean what you type & searchResult mean that API Provide .... while searching 
+-🎯So how this I would add it over here ... this same thing 
+-🎯Now above in real this BELOW one 
+state = { ...state},...action.payload; This is basically merge the payload as well as my state 
+-🎯put this searchSlice into store
+Go 🗃️store.js 
+@Note: we muted the state this is how redux is work
+
+
+4) FROM: 🗃️HEADER.js 
+   @BETWEEN_LINE: 17 to 50 
+   @ABOUT: useEffect & getSearchSuggestion() to get rid of not repeting API 
+    -🎯As we see above we'r making an API Call via getSearchSuggestion()  
+  -🎯there in API we need pass searchQuery and API suggesation as per stored value inside redux tool kit  
+  -🎯Need to pass logic as a Cache(did redux) itself Let's try 
+  -🎯By the term logic means use if else 
+  -🎯if it is present in my cache/searchCache/redux store Then directly setSuggestion(json[1]) or else make an API call and setSuggestion
+  -conclude If it is present in my cache/searchCache(redux store) don't make an Api call(TA:getSearchSuggestion()) just directly set my data from redux/cache store what we build it;
+  -🎯Now it's time to create cache/searchCache How will get access to this cache/searchCache(redux store) by subscribing to it!! see code above useEffect by mean we'r reading data 
+  -🎯store.search it will give you empty Object what we mentioned in 🗃️searchSlice.js see initialState:{}
+  -🎯Now we'r gonna'v searchCache(cache/searchCache:combo of searchkey({empty})+APISuggestion) over ther with empty Object
+  -🎯Let's If searchQuery present in my searchCache(cache/searchCache) How'll i find that 
+
+  Our cache/searchCache Look something like this combo of searchkey({empty})+API suggesation
+
+  --------------------👨‍💻
+  #CODE:
+  searchCache = 
+  {
+    "ipho":["iphone11","iphone13","iphone14"]
+  }
+  searchQuery = ipho
+
+  😵@NOTE: I'm trying to findOut searchCache Of searchQuery & what will it return i'll setSuggestion(my) & i'll setSuggestion with searchCache of searchQuery by mean "ipho":["iphone11","iphone13","iphone14"]
+  😵@NOTE:searchQuery:"ipho" setSuggestion:["iphone11","iphone13","iphone14"] that we'r manually set(setSuggestion) it searchCache of searchQuery
+
+  --------------------👨‍💻
+  
+  So,How'll i search if "ipho" is present in my searchCache/cache/redux stor or not how'll i present
+  -🎯Logic of if and else in useEffect
+  -🎯If my searchCache of[] is searchQuery present in genral searchCache[searchQuery] then just return the searchCache of[searchQuery] "@"[] consider this Of
+  in genral searchCache[searchQuery]; directly set this value 
+
+  What if If not present(search KEY) in my cache/searchCache/redux ?? what should i do i should make an API Call and Upadat it my cache How will Upadat it Go getSearchSuggestion = async() SECTION & Upadat it HoW YOu do that Just dispatch an action It is as simple as that😍 & 
+  -🎯what will i send in my cacheResult inside it  
+  -🎯send an Object of it ensure that not json
+  -🎯Object comes with key & value pair 
+  -🎯Key Always send in [...] inside it
        
+*/
