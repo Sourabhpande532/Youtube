@@ -24,7 +24,7 @@ export default searchSlice.reducer;
 -key string mean what you type & searchResult mean that API Provide .... while searching 
 -So how this I would add it over here ... this same thing 
 -Now above in real this BELOW one 
-state = {...action.payload, ...state}; This is basically merge the payload as well as my state 
+state = { ...state},...action.payload; This is basically merge the payload as well as my state 
 -put this searchSlice into store
 Go 🗃️store.js 
 @Note: we muted the state this is how redux is work
@@ -37,7 +37,7 @@ Go 🗃️store.js
 /** 1)
  * Ok What is my initialState Now it's time to create Cache for DSA Plays very vital role TC & SC complexity
  * Cache
- * ?Time complexity to search in Array should be  = O(n) it mean you'v to do linear search one by one
+ * ?Time complexity to search in Array should be  = O(n) it mean you'v to do linear search one by one one to check for all(loop)
  * Some people might be use direct methode "array.indexOf() Or array.includes()" TC same linear = O(n);
  * if i'm search on array
  * E.g [i,ip,iph,iphone] it takes time to count which is Big of O(n) for search iphone but in opposite of that

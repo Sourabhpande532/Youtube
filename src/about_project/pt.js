@@ -152,7 +152,8 @@ API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds
         * PROCESS know as Reconcialation 
         * 
         *      
-        ----------------NEW FEAT 
+        ----------------NEW FEAT
+         
         0)
         LET'S WORK ON REDUX TO BUILD SEARCH FUNCTIONALITY WHILE NOT REPEAT SAME API REGAIN 
         
