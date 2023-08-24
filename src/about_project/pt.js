@@ -151,6 +151,20 @@ API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds
         * 
         * PROCESS know as Reconcialation 
         * 
-        * 
+        *      
+        ----------------NEW FEAT 
+        0)
+        LET'S WORK ON REDUX TO BUILD SEARCH FUNCTIONALITY WHILE NOT REPEAT SAME API REGAIN 
+        
+        E.g IF I Write "iphon max pro" It make API Call According to But IF Want to back from" pro" by using Backslash So it should not Make API call that is task!! LIKE youtube 
 
-        *  */
+        -Whenever I'm searching I'll make cache inside my redux like a store 
+        -by mean it'll store search result inside my redux store 
+        -Not search for same work one it make it 
+        -Now it's time to store so first create 🗃️searchSlice.js;
+        -Go on searchSlice;
+        2:05m
+       
+       */
+
+       

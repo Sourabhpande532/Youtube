@@ -13,10 +13,13 @@ const Header = () => {
   useEffect(() => {
     const timer = setTimeout(() => getSearchSuggestion(), 200);
 
+    // REMOVE TIMER 
     return () => {
       clearTimeout(timer);
     };
   }, [searchQuery]);
+
+
 
   const getSearchSuggestion = async () => {
     console.log("API CALL - " + searchQuery);
@@ -31,6 +34,7 @@ const Header = () => {
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
+
 
   return (
     <div className='grid grid-flow-col p-4 m-2 shadow-lg'>
