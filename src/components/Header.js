@@ -45,7 +45,7 @@ const Header = () => {
       })
     );
   };
-
+  
   // TOGGLE
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
@@ -106,3 +106,12 @@ const Header = () => {
 };
 
 export default Header;
+
+/* DEVELOPE LRU CACHE (H.W)
+REF: 🔗✈️https://youtu.be/xDEuM5qa0zg?si=HLIrBYjFBsviI3YX
+-Least Recently Used (LRU) is one of those DSA algorithms.
+-It Basically Come Under the Hood of DSA 
+-With the help of One we can Restrict Our Cache to stored only 100 keys [100] If more than that Remove from it Top! While BUILDING SEARCH BAR
+-As soon as The object length is increase more than 100 start removing from Top
+-It is Special Storage 
+-It's is Separate Storage  */

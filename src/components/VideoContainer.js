@@ -11,14 +11,10 @@ const VideoContainer = () => {
   }, []);
 
   const getVideos = async () => {
-    try {
-      const data = await fetch(YOUTUBE_VIDEO_API);
-      const json = await data.json();
-      setVideos(json.items);
-      console.log(json.items);
-    } catch (error) {
-      console.error("Error fetching videos:", error);
-    }
+    const data = await fetch(YOUTUBE_VIDEO_API);
+    const json = await data.json();
+    setVideos(json.items);
+    console.log(json.items);
   };
 
   // Early Return 

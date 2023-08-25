@@ -239,5 +239,17 @@ Go 🗃️store.js
   -🎯send an Object of it ensure that not json
   -🎯Object comes with key & value pair 
   -🎯Key Always send in [...] inside it
+
+
+  ---------------NEW 
+
+  @TITLE:LET'S BUILD COMMENT SECTION
+  @COMMENT_TYPE: N LEVEL NEASTED COMMENT, 2 LEVEL NEASTED(MEAN->A SECTION OF COMMENT & 2ND ONE REPLY)
+
+  @NOTE:NOW,WE'R GOING TO BUILD N LEVEL NEASTED COMMENT IT'S ONE OF THE IMPORTANT INTERVIEW QUESTION 
+  -It mean It can go up to Many Leval 
+  -continuous flow COMMENT till it end 
+  
+
        
 */
