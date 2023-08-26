@@ -251,5 +251,48 @@ Go 🗃️store.js
   -continuous flow COMMENT till it end 
   
 
+  E.g of N NEASTED COMMENT 
+  @LOCATION:🗃️CommentContainer.js 
+
+  // Befoure 
+  const CommentList = ({ comments }) => {
+   For the time being use Index As key
+  return comments.map((comment, i) => (
+    <div>
+      /* MAIN COMMENT 
+      <Comment key={i} data={comment} />
+      /* EACH COMMENT LIST OF COMMENT(CHILDREN) 
+      <div className='pl-10 border border-l-black ml-5'>
+        <Comment key={i} data={comment} />
+        <Comment key={i} data={comment} />
+        <Comment key={i} data={comment} />
+      </div>
+    </div>
+  ));
+};
+
+HERE YOU'V FOUND MAIN COMMENT & EVERY COMMENTS HAS IT'S OWN REPLY COMMENT BUT(LIST OF CHILDREN) BUT WHAT'R THE RPLAY AT THE END OF THE DAY THIS REPLY IS AGAIN "LIST OF COMMENT" ONECE AGAIN SO CAN I CALLED THIS "CommentList" ONECE AGAIN INSTEAD ABOVE CODE SEE WE 4 TIME CALL COMMENT WITH OF THEM ONE IS MAIN & OTHER IS CHILDREN
+-IT'S IS KNOW AS RECURSION COMES UNDER HOOD OF DSA CALLING SAME COMPONENT INSIDE 
+-USE SPECIFICALLY FOR REPLY'S
+-WHAT SHOULD WE PASS INSIDE <CommentList/> SHOULD PASS REPLY'S 
+
+Now,
+const CommentList = ({ comments }) => {
+ For the time being use Index As key
+  return comments.map((comment, i) => (
+    <div>
+      {/* MAIN COMMENT *
+      <Comment key={i} data={comment} />
+      {/*EACH COMMENT LIST OF COMMENT(CHILDREN) 
+      <div className='pl-10 border border-l-black ml-5'>
+        <CommentList comments={comment.replies}/>
+      </div>
+    </div>
+  ));
+};
+
+
+
+
        
 */
