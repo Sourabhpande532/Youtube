@@ -293,6 +293,60 @@ const CommentList = ({ comments }) => {
 
 
 
+--------------------------NEW 
+
+@TITLE: BUILD A LIVE STREMING CHAT 
+@LOCATION: 
+@OVERVIEW:
+@NOTE: LIVE CHAT >> INFINITE SEARCH >> PAGINATION(>> Greter than)
+-Q) How this Live chat poping Up ?
+    How It is load new comment Quickly ?
+    -There Live Data is involved those Application 
+    -Kind of Streming,Live chat type of app 
+    -@Note:It's keep changing Rugularly even without Refresing Page e.g treading app, Zerodha, crickbuzz,Live Commentry
+    -Need to continuous keep on fetching Data here 
+    -KEEP A NOTE AND PAPER BELOW ONE IS THEORY 
+    
+    @CHALLEGES:
+    What are CHALLEGES we Face Here ??
+    -Get Data LIVE 
+     (By the term it mean The Application Which near real time Live Data)
+    -Update The UI Data In efficient Way That Ensure that page should not Freezh 
+
+    @PREREQUISITS 
+    -Make sure Our Page shouldn't Freezh How much Data it is !!
+    -Need to Mangage Data Layer & UI Layer 
+    
+    @HANDLE_DATA_OF_THIS_APPLICATION
+    -DATA (LIVE)
+     (TWO Way to Handle Data)
+      - WEB SOCKETS CONECTION 
+      What Does that ?
+      # Web SOCKETS is Two Way Connection Established it's kind of Like a HandShake Between the server & UI(Backend & Fronted)
+      # Once Done Passing Data To server is very Easy it is done through Events
+      # Ensure that initial setup conn takes time 
+    # what Happend Between Procedure two of ther Onece it is handShake/conn from UI TO Server Now you've preveledged You can Quickly send Data From Either Side(Able to send data from Both side reversible)
+    # It is Know as By Directional(Two Directional) Live Data  
+    # No Interval (Regular) mean The data come anytime & send it anywhere 
+    #🔻 E.g Zerodha,crickbuzz,treading App,what's app @Note:graph related querry 
+    # LIVE STREMING APPLIACATION AlWAYS USE WEB SOCKETS & NEED TO MAINTAIN ORDER AlWAYS I'ts MOST IMPORTANT
+
+    - API/LONG POLLING CONNECTION 
+    What Does Mean ? 
+    # UI Request to Server here 
+    # It is One Directional(Unidirectional)
+    # Interval Found here ... 
+    # It cheks data after every sec Between Two one whether the data is coming or NOT 
+    #🔻 Gmail & Crickbuzz is great e.g of API POLLING Doesn't want instant Result it's comes after loading(reload) or after some time it's not keep on coming because of Interval
+     
+
+    
+
+
+
+
+
+
 
        
 */

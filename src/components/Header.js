@@ -4,13 +4,13 @@ import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
 import store from "../utils/store";
 import { cacheResult } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [searchQuery, setSerachQuery] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
 
- 
   const searchCache = useSelector((store) => store.search);
   /*store.search gives you empty Object & it's combo of SearchKey+APISuggestion @NOTE:setRedux here with value*/
 
@@ -29,7 +29,6 @@ const Header = () => {
     };
   }, [searchQuery]);
 
-
   const getSearchSuggestion = async () => {
     console.log("API CALL - " + searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
@@ -40,12 +39,12 @@ const Header = () => {
     // update cache
     dispatch(
       cacheResult({
-      /* iphone:[1,3,4,4], dummy data*/
-      [searchQuery]: json[1],
+        /* iphone:[1,3,4,4], dummy data*/
+        [searchQuery]: json[1],
       })
     );
   };
-  
+
   // TOGGLE
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
