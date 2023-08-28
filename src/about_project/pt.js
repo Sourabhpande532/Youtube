@@ -328,7 +328,7 @@ const CommentList = ({ comments }) => {
     # what Happend Between Procedure two of ther Onece it is handShake/conn from UI TO Server Now you've preveledged You can Quickly send Data From Either Side(Able to send data from Both side reversible)
     # It is Know as By Directional(Two Directional) Live Data  
     # No Interval (Regular) mean The data come anytime & send it anywhere 
-    #🔻 E.g Zerodha,crickbuzz,treading App,what's app @Note:graph related querry 
+    #🔻 E.g Zerodha,treading App,what's app @Note:graph related querry 
     # LIVE STREMING APPLIACATION AlWAYS USE WEB SOCKETS & NEED TO MAINTAIN ORDER AlWAYS I'ts MOST IMPORTANT
 
     - API/LONG POLLING CONNECTION 
@@ -338,6 +338,15 @@ const CommentList = ({ comments }) => {
     # Interval Found here ... 
     # It cheks data after every sec Between Two one whether the data is coming or NOT 
     #🔻 Gmail & Crickbuzz is great e.g of API POLLING Doesn't want instant Result it's comes after loading(reload) or after some time it's not keep on coming because of Interval
+    $# LIVE Chat also demand API POLLING IT is totally depend on user behaviour or Let's user takes 3 min to put commend The Api is supposed to call after 3 min If bowler Takes 4 min to finshed the Api would call afte 4 min ! 
+
+
+    Q) But Why this page is not Freezing after making bunch of Api ?
+    What Quickly Does it Youtube behind the since talk about LIVE CHAT API Ones it reach at Top/or it's fix/certain no. whaterver it is It will deleted it is smart technique.
+    -it keeps change According to browser keeps on updating the Item To make user interfase Good & well
+    -it does make UX better 
+
+    
      
 
     
