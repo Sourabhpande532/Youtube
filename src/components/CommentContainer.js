@@ -2,38 +2,38 @@ import React from "react";
 
 const commentsData = [
   {
-    name: "Akshay Saine",
+    name: "Saurabh pande",
     text: "Lorem iipsum doldfj jlj dfdj",
     replies: [],
   },
   {
-    name: "Akshay Saine",
+    name: "Saurabh pande",
     text: "Lorem iipsum doldfj jlj dfdj",
     replies: [],
   },
   {
-    name: "Akshay Saine",
+    name: "Saurabh pande",
     text: "Lorem iipsum doldfj jlj dfdj",
     replies: [
       {
-        name: "Akshay Saine",
+        name: "Saurabh pande",
         text: "Lorem iipsum doldfj jlj dfdj",
         replies: [
           {
-            name: "Akshay Saine",
+            name: "Saurabh pande",
             text: "Lorem iipsum doldfj jlj dfdj",
             replies: [
               {
-                name: "Akshay Saine",
+                name: "Saurabh pande",
                 text: "Lorem iipsum doldfj jlj dfdj",
                 replies: [
                   {
-                    name: "Akshay Saine",
+                    name: "Saurabh pande",
                     text: "Lorem iipsum doldfj jlj dfdj",
                     replies: [],
                   },
                   {
-                    name: "Akshay Saine",
+                    name: "Saurabh pande",
                     text: "Lorem iipsum doldfj jlj dfdj",
                     replies: [],
                   },
@@ -44,14 +44,14 @@ const commentsData = [
         ],
       },
       {
-        name: "Akshay Saine",
+        name: "Saurabh pande",
         text: "Lorem iipsum doldfj jlj dfdj",
         replies: [],
       },
     ],
   },
   {
-    name: "Akshay Saine",
+    name: "Saurabh pande",
     text: "Lorem iipsum doldfj jlj dfdj",
     replies: [],
   },
