@@ -10,6 +10,7 @@ const store = configureStore({
     chats:chatSlice,
   },
 });
+
 export default store;
 
 /*3) 
