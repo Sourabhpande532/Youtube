@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     apps: appSlice,
     search:searchSlice,
-    chat:chatSlice,
+    chats:chatSlice,
   },
 });
 export default store;
