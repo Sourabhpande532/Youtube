@@ -25,16 +25,17 @@ const LiveChat = () => {
   }, []);
 
   return (
-    /*  <div className='h-[500px] ml-2 p-2 border border-black bg-slate-100 rounded-lg'>
+    /* <div className='h-[500px] ml-2 p-2 border border-black bg-slate-100 rounded-lg'>
       <ChatMessage name='Rahul' message='This is Live Class ' />
       <ChatMessage name='Rahul' message='This is Live Class ' />
       <ChatMessage name='Rahul' message='This is Live Class ' />
       <ChatMessage name='Rahul' message='This is Live Class ' />
-    </div> */
+    </div>  */
+
     <div className='h-[500px] ml-2 p-2 border border-black bg-slate-100 rounded-lg'>
       {chatMessage.map((c, i) => {
         <ChatMessage key={i} name={c.name} message={c.message} />;
-        <h1>Hle</h1>
+        <h1>Hle</h1>;
       })}
     </div>
   );

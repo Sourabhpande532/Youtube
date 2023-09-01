@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentContainer from "./CommentContainer";
-import LiveChat from "./LiveChat";
+import LiveChatting from "./LiveChatting";
 
 const WatchPage = () => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -28,7 +28,7 @@ const WatchPage = () => {
             allowFullScreen></iframe>
         </div>
         <div className='w-full'>
-          <LiveChat />
+          <LiveChatting />
         </div>
       </div>
       <div className='w-[1050px]'>
