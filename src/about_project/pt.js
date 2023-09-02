@@ -349,5 +349,21 @@ const CommentList = ({ comments }) => {
     @For Random name Generator@
     ref: ✈️🔗https://stackoverflow.com/questions/54708626/random-name-generator-works
     ref: ✈️🔗https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+
+
+
+    ---------------------------NEW 
+
+    @TITLE:About Memoization 
+    @Ref:✈️🔗https://react.dev/reference/react
+
+    @OVERVIEW
+    -Memoization It Increse our PERFORMANCE💃 APP 
+    -UseMemo is a React Hook that lets you cache the result of a calculation between re-renders
+    -it cache the result between re-render 
+    -Ok what does that mean When my COMPONENT Re-render, when I update(setX) my state it rerender isn't it! 
+    -Let's suppose I want cache some result so it doesn't do some result when evertime i call Api, evertime my state get changes, evertime my rerender happend i want something to be cache don't want all the work start from onece again & start from scratch 
+    -It saves time from repatative stuff repeat again again Why because it could be expensive one if you everytime start from scratch;
+    
      
 */
