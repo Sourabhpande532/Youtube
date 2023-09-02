@@ -5,6 +5,7 @@ const Demo = () => {
     <div>
       <h1>For Memoization</h1>
       <p>All about to make app faster </p>
+      <p>All about to make app faster </p>
     </div>
   );
 };
