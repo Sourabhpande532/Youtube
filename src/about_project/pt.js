@@ -363,7 +363,10 @@ const CommentList = ({ comments }) => {
     -it cache the result between re-render 
     -Ok what does that mean When my COMPONENT Re-render, when I update(setX) my state it rerender isn't it! 
     -Let's suppose I want cache some result so it doesn't do some result when evertime i call Api, evertime my state get changes, evertime my rerender happend i want something to be cache don't want all the work start from onece again & start from scratch 
-    -It saves time from repatative stuff repeat again again Why because it could be expensive one if you everytime start from scratch;
+    -It saves time from repatative stuff repeat again again Why because it could be expensive one. while you everytime start from scratch;
+    -Go Components/Demo.js 
+    -see over ther everytime i press key on input field it Reconcialation happend .. it is rendering my components again & again,Let's suppose we perform Heavy operation instead console don't you thing so it costly for us while onChage so to get rid of this problem Memoization comes into play
+    - for demo you can perform n prime number operation as you cross 7 digit yo'r UI freezh 
     
      
 */
