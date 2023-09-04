@@ -38,7 +38,7 @@ Where should i make API Call in 🗃️videoCantainer.js file
  -🎯then Childern also mandatory 
  -🎯Fact of Childern is where you defined Or mention "OUTLET" it will shoot out by the term it mean it'll mute/change 
 
--🎯First thing to note wherever i'll give appRouter my app will render over there or Act According as exact you want!
+-🎯First thing to note wherever i'll give appRouter my app will render over there or Act According as exact you want! By the term it means it Navigate Accordingly
   -🎯if my path is "/" slash my Body will be render below <Head/> as i shoot appRouter overThere;
   -🎯@Childern: it goes wherever My OUTLET exits
   -🎯Now the path is "/"(slash) what children should be render in my Outlet see in Childern [...] i.e nothing but is <MainContainer/>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../utils/appSlice";
+import { closeMenu, toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
 import store from "../utils/store";
 import { cacheResult } from "../utils/searchSlice";
@@ -81,7 +81,7 @@ const Header = () => {
             🔎
           </button>
         </div>
-        <div className=' fixed bg-white py-1 px-2 w-[25rem] shadow-lg rounded-lg border border-gray-100'>
+        <div className="absolute bg-white py-1 px-2 w-[25rem] rounded-lg  mt-2">
           <ul>
             {showSuggestion &&
               suggestion.map((s) => (
