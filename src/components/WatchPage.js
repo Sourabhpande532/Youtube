@@ -6,7 +6,7 @@ import CommentContainer from "./CommentContainer";
 import LiveChatting from "./LiveChatting";
 
 const WatchPage = () => {
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   console.log(searchParams.get("v"));
 
   // Close Menu

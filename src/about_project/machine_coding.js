@@ -60,8 +60,6 @@ const Header = () => {
     };
   }, [searchQuery]);
 
-
-  
   
   const getSearchSuggestion = async () => {
     console.log("API CALL - " + searchQuery);

@@ -70,7 +70,11 @@ Ref:✈️🔗https://legacy.reactjs.org/docs/higher-order-components.html
 
 
 -----------------------))-------------------------
-@DEBOUNCING  
+@ABOUT:SEARCH FUNCTIONALITY
+@DEBOUNCING 
+
+--@1@--
+
 -🎯It is Not making an API Call on every Key press talk about flipcart website just like Youtube(it makes Api call on every key press)
 -🎯So this concept know as ""Debouncing"" DEBOUNICING 
 -🎯IF I'M WRITTING FAST IT JUST SKIP SOME EVENT WHICH
@@ -153,13 +157,16 @@ API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds
         * 
         *      
         ----------------NEW FEAT
-         
-        0)
-        LET'S WORK ON REDUX TO BUILD SEARCH FUNCTIONALITY WHILE NOT REPEAT SAME API REGAIN 
-        
-        E.g IF I Write "iphon max pro" It make API Call on each word According to But IF Want to back from" pro" by using Backslash So it should not Make API call that is task!! LIKE youtube 
 
-        -🎯Whenever I'm searching I'll make cache inside my redux like a store 
+
+        
+         
+      0)--@2--
+      LET'S WORK ON REDUX TO BUILD SEARCH FUNCTIONALITY WHILE NOT REPEAT SAME API REGAIN 
+        
+       @@TASK:- E.g IF I Write "iphon max pro" It make API Call on each word According to But IF Want to back from" pro" by using Backslash So it should not Make API call that is task!! LIKE youtube 
+
+        -🎯Whenever I'm searching I'll make separate cache/store inside my redux like a store 
         -🎯by mean it'll store search result inside my redux store 
         -🎯Not search for same work one it make it 
         -🎯Now it's time to store so first create 🗃️searchSlice.js;
@@ -170,6 +177,7 @@ API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds
         @IMP:POINTS & OVERVIEW 
         /
 /*
+!NOT_IMP for SIDE-INFO
  * Ok What is my initialState Now it's time to create Cache for DSA Plays very vital role TC & SC complexity
  * Cache
  * ?Time complexity to search in Array should be  = O(n) it mean you'v to do linear search one by one one to check for all(loop)
@@ -185,7 +193,8 @@ API:🔗✈️http://suggestqueries.google.com/complete/search?client=firefox&ds
  * --------------
  *   
  * 
- *  
+
+// --@3---
 2)Existing file 
  -😵initialState it suppose to empty Object as per querry bcz search should be empty at initial 
 -🎯then pass reducers inside into it pass state & action
@@ -199,7 +208,7 @@ state = { ...state},...action.payload; This is basically merge the payload as we
 Go 🗃️store.js 
 @Note: we muted the state this is how redux is work
 
-
+--@4--
 4) FROM: 🗃️HEADER.js 
    @BETWEEN_LINE: 17 to 50 
    @ABOUT: useEffect & getSearchSuggestion() to get rid of not repeting API 
