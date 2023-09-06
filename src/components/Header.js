@@ -4,12 +4,13 @@ import { closeMenu, toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
 import store from "../utils/store";
 import { cacheResult } from "../utils/searchSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [searchQuery, setSerachQuery] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
+  const navigate = useNavigate();
 
   const searchCache = useSelector((store) => store.search);
   /*store.search gives you empty Object & it's combo of SearchKey+APISuggestion @NOTE:setRedux here with value*/
@@ -50,6 +51,12 @@ const Header = () => {
     dispatch(toggleMenu());
   };
 
+  const handleSearch = () => {
+    // Navigate to the Result page with the search query as a URL parameter
+    navigate(`/result?query=${searchQuery}`);
+    setSerachQuery("")
+  };
+
   return (
     <div className='grid grid-flow-col p-4 m-2 shadow-lg'>
       <div className='flex col-span-1'>
@@ -77,15 +84,20 @@ const Header = () => {
             onFocus={() => setShowSuggestion(true)}
             onBlur={() => setShowSuggestion(false)}
           />
-          <button className='border border-gray-400 bg-gray-200 rounded-r-full w-10'>
+          <button className='border border-gray-400 bg-gray-200 rounded-r-full w-10' onClick={handleSearch}>
             🔎
           </button>
         </div>
-        <div className="absolute bg-white py-1 px-2 w-[25rem] rounded-lg  mt-2">
+        <div className='absolute bg-white py-1 px-2 w-[25rem] rounded-lg  mt-2'>
           <ul>
             {showSuggestion &&
               suggestion.map((s) => (
-                <li key={s} className='py-2 px-2 shadow-sm hover:bg-gray-100'>
+                <li
+                  key={s}
+                  className='py-2 px-2 shadow-sm hover:bg-gray-100'
+                  onClick={() => {
+                    navigate(`/result?query=${s}`);
+                  }}>
                   🔎 {s}
                 </li>
               ))}
