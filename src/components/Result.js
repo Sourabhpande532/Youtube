@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { GOOGLE_API_KEY } from "../utils/constant";
 import Shimmer from "./Shimmer";
+import Error from "./Error";
 
 const Result = () => {
   /* DEMONSTRATE ON UI */
@@ -93,7 +94,7 @@ const Result = () => {
             );
           })
         ) : (
-          <div> No Result found </div>
+          <div> <Error/></div>
         )}
       </div>
     </div>
