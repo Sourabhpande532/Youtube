@@ -1,4 +1,4 @@
-export const GOOGLE_API_KEY = "AIzaSyBl_4fpr85UgkSIkJrJwUBSCmR4Vi_dH1s";
+export const GOOGLE_API_KEY = "AIzaSyCkgq8eqpICtoav7WN2ySfFe6XWNJ_YWkY"
 
 export const LIVE_MESSAGE_COUNT = 10;
 

@@ -75,7 +75,7 @@ Ref:✈️🔗https://legacy.reactjs.org/docs/higher-order-components.html
 
 --@1@--
 
--🎯It is Not making an API Call on every Key press talk about flipcart website just like Youtube(it makes Api call on every key press)
+-🎯It is Not making an API Call on every Key press talk about flipcart website just like Youtube(it makes Api call on every key press But DEBOUNCING is there but it's FAST)
 -🎯So this concept know as ""Debouncing"" DEBOUNICING 
 -🎯IF I'M WRITTING FAST IT JUST SKIP SOME EVENT WHICH
 
