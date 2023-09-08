@@ -22,14 +22,20 @@ const LiveChatting = () => {
           message: makeRandomComments(10) + "✈️",
         })
       );
-    }, 3000);
+    }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+
+  /* SHOW/HIDE */
+  const isChatOpen = useSelector((store)=>store.livechat.isChatOpen);
+
+  if(!isChatOpen) return null;
 
   return (
     <>
       <div>
-        <div className='h-[500px] ml-2 p-2 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse'>
+        <div className='h-[500px] w-[415px] ml-2 p-2 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse'>
           {chatMessages.map((c, i) => (
             <LiveComments key={i} name={c.name} message={c.message} />
           ))}

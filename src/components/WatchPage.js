@@ -4,6 +4,8 @@ import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentContainer from "./CommentContainer";
 import LiveChatting from "./LiveChatting";
+import ShowHide from "./ShowHide";
+import VideoSuggestion from "./VideoSuggestion";
 
 const WatchPage = () => {
   let [searchParams] = useSearchParams();
@@ -15,8 +17,8 @@ const WatchPage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div className='flex flex-col w-full'>
-      <div className='flex w-full'>
+    <div className='flex'>
+      <div className=''>
         <div className=''>
           <iframe
             width='1011'
@@ -27,12 +29,14 @@ const WatchPage = () => {
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
             allowFullScreen></iframe>
         </div>
-        <div className='w-full'>
-          <LiveChatting />
+        <div className='w-[1050px]'>
+          <CommentContainer />
         </div>
       </div>
-      <div className='w-[1050px]'>
-        <CommentContainer />
+      <div className='w-full '>
+        <ShowHide />
+        <LiveChatting />
+        <VideoSuggestion />
       </div>
     </div>
   );

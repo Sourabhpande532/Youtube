@@ -31,18 +31,21 @@ const Header = () => {
   }, [searchQuery]);
 
   const getSearchSuggestion = async () => {
-    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
-    const json = await data.json();
-    setSuggestion(json[1]);
-    // console.log(json);
+    try {
+      const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+      const json = await data.json();
+      setSuggestion(json[1]);
 
-    // update cache
-    dispatch(
-      cacheResult({
-        /* iphone:[1,3,4,4], dummy data*/
-        [searchQuery]: json[1],
-      })
-    );
+      // update cache
+      dispatch(
+        cacheResult({
+          [searchQuery]: json[1],
+        })
+      );
+    } catch (error) {
+      // Handle the error gracefully
+      console.error("An error occurred:", error);
+    }
   };
 
   // TOGGLE

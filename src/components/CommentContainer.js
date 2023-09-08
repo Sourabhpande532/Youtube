@@ -78,9 +78,9 @@ const Comment = ({ data }) => {
 const CommentList = ({ comments }) => {
   return comments.map((comment, i) => (
     <div>
-      {/* MAIN COMMENT */}
+      {/* SINGLE COMMENT */}
       <Comment key={i} data={comment} />
-      {/*EACH COMMENT LIST OF COMMENT(CHILDREN) */}
+      {/* It's Specilly for showing Reply(CHILDREN) */}
       <div className='pl-10 border border-l-black ml-5'>
       {/* RECURSION */}
         <CommentList comments={comment.replies} />
@@ -93,7 +93,10 @@ const CommentContainer = () => {
   return (
     <div className='m-5 p-2'>
       <h1 className='text-2xl font-bold'>Comments:</h1>
+      {/*Below one for SINGLE COMMENT INFO  */}
       {/* <Comment data={commentsData[0]} /> */}
+
+      {/*Below one for MULTI COMMENT INFO  */}
       <CommentList comments={commentsData} />
     </div>
   );
