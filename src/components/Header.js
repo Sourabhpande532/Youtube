@@ -91,7 +91,7 @@ const Header = () => {
             🔎
           </button>
         </div>
-        <div className='absolute bg-white py-1 px-2 w-[25rem] rounded-lg  mt-2'>
+        <div className='absolute bg-white py-1 px-2 w-[25rem] rounded-lg  mt-2 z-10'>
           <ul>
             {showSuggestion &&
               suggestion.map((s) => (

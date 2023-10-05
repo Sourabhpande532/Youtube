@@ -3,13 +3,15 @@ import appSlice from "./appSlice";
 import searchSlice from "./searchSlice";
 import chatSlice from "./chatSlice";
 import showHideSlice from "./showHideSlice";
+import categoreSlice from "./categoreSlice";
 
 const store = configureStore({
   reducer: {
     apps: appSlice,
     search:searchSlice,
     chats:chatSlice,
-    livechat:showHideSlice
+    livechat:showHideSlice,
+    categories:categoreSlice
   },
 });
 
