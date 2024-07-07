@@ -22,7 +22,7 @@
 1. 📥 Clone the repository to your local machine.
 2. 📦 Install dependencies using `npm install`.
 3. 🔑 Obtain a YouTube API key from the Google Developers Console.
-4. 🚀 Start the development server using `npm start`.
+4. 🚀 Start the development server using `npm start`. That will help for further process
 
 ## 💖 Acknowledgements
 
