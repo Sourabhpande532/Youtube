@@ -32,6 +32,6 @@
 - 🎨 Tailwind CSS
 - 📹 Google Developers Console
 
-**Note:** This project is created for educational purposes only.
+**Note:** This project is created for educational as well as learning purposes only.
 
 ---
