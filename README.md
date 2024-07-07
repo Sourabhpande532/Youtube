@@ -27,7 +27,7 @@
 ## 💖 Acknowledgements
 
 - ⚛️ React
-- 🌐 React Router DOM
+- 🌐 React Router 'DOM'
 - 🚀 Redux
 - 🎨 Tailwind CSS
 - 📹 Google Developers Console
